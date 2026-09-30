@@ -1,0 +1,32 @@
+def mostrar_menu():
+    print("--- MENÚ PRINCIPAL ---")
+    print("1. Iniciar juego")
+    print("2. Ver configuraciones")
+    print("3. Salir")
+
+mostrar_menu()
+
+import random
+
+def lanzar_dado():
+    numero = random.randint(1, 6)
+    print(f"El dado rodó y cayó en: {numero}")
+
+lanzar_dado()
+
+def calcular_descuento(precio_original, porcentaje):
+    descuento = precio_original * (porcentaje / 100)
+    precio_final = precio_original - descuento
+    return precio_final
+
+total_a_pagar = calcular_descuento(500, 20)
+print(f"El total con descuento es: ${total_a_pagar}")
+
+def verificar_acceso(nombre, edad):
+    if edad >= 18:
+        print(f"Adelante, {nombre}. Tienes acceso libre por ser mayor de edad.")
+    else:
+        print(f"Lo siento, {nombre}. El acceso es solo para mayores de 18 años.")
+
+verificar_acceso("Sofía", 22)
+verificar_acceso("Mateo", 15)
